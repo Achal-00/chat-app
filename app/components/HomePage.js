@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import axios from "axios";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://chat-app-yj81.onrender.com");
 
 export default function HomePage({ username }) {
   const [message, setMessage] = useState("");
@@ -11,7 +11,9 @@ export default function HomePage({ username }) {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/messages`);
+        const response = await axios.get(
+          `https://chat-app-yj81.onrender.com/api/messages`
+        );
         setMessages(response.data);
       } catch (error) {
         console.error("Error fetching messages:", error);
