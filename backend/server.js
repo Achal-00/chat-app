@@ -9,6 +9,7 @@ const cors = require("cors");
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, { cors: { origin: "*" } });
+const PORT = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json());
@@ -50,6 +51,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(8000, () => {
+server.listen(PORT, () => {
   console.log("listening on *:8000");
 });

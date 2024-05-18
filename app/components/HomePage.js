@@ -11,7 +11,7 @@ export default function HomePage({ username }) {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/messages");
+        const response = await axios.get(`http://localhost:8000/api/messages`);
         setMessages(response.data);
       } catch (error) {
         console.error("Error fetching messages:", error);
