@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align='center'>Chat Application</h1>
+<p align='center'>This project develops a chat room application that allows any authenticated user to send messages.
+</p>
 
-## Getting Started
+## Demo
 
-First, run the development server:
+![image](https://github.com/Achal-00/chat-app/assets/106076516/d7734163-60a9-43e8-bc58-90bc01101b74)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![image](https://github.com/Achal-00/chat-app/assets/106076516/6822489b-f58f-4075-99f5-45b1ee1dc79b)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![image](https://github.com/Achal-00/chat-app/assets/106076516/d4f688ee-7336-4488-9e70-589cf3bc6f9f)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Check out the live demo [here](https://chat-app00.vercel.app).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Demo Credentials - username: demo | password: password
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next JS
+- Tailwind CSS
+- React JS
+- Node JS
+- Express JS
+- MongoDB
+- Socket.IO
+- Sonner
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Run Locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Frontend
 
-## Deploy on Vercel
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Achal-00/chat-app.git
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navigate to the project directory:
+   ```bash
+   cd chat-app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Install dependencies:
+   ```bash
+   npm install
+
+4. Create .env file:
+   ```bash
+   touch .env
+
+5. Add MongoDB_URI to .env file:
+   ```bash
+   MONGODB_URI=URI
+
+6. Start the development server:
+   ```bash
+   npm run dev
+
+7. Open your browser and visit http://localhost:3000
+
+### Backend
+
+1. Navigate to the backend directory:
+   ```bash
+   cd chat-app/backend
+
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Create .env file:
+   ```bash
+   touch .env
+
+4. Add MongoDB_URI to .env file:
+   ```bash
+   MONGODB_URI=URI
+
+5. Start the development server:
+   ```bash
+   node server.js
+
+## Contact Information
+
+For questions or feedbacks feel free to contact me:
+
+- **Email:** achaldev3@gmail.com
+- **LinkedIn:** [Achal](https://www.linkedin.com/in/achal-ab39652b4/)
