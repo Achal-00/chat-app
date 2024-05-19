@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Toaster, toast } from "sonner";
 
 export default function Login(props) {
+  const [isLoading, setIsLoading] = useState(false);
+
   const onSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
 
     const formData = new FormData(event.target);
     const response = await fetch("/api/login", {
@@ -17,6 +20,7 @@ export default function Login(props) {
       props.setUsername(formData.get("username"));
     } else {
       toast.error(data.message);
+      setIsLoading(false);
     }
   };
 
@@ -54,7 +58,7 @@ export default function Login(props) {
             type="submit"
             className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
           >
-            Login
+            {isLoading ? "..." : "Login"}
           </button>
         </form>
       </div>

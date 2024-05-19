@@ -7,6 +7,7 @@ const socket = io("https://chat-app-yj81.onrender.com");
 export default function HomePage({ username }) {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -15,6 +16,7 @@ export default function HomePage({ username }) {
           `https://chat-app-yj81.onrender.com/api/messages`
         );
         setMessages(response.data);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching messages:", error);
       }
@@ -34,20 +36,26 @@ export default function HomePage({ username }) {
   };
 
   return (
-    <div className="relative p-4 w-full grid">
-      <div className="w-[90%] md:w-1/2 justify-self-center grid gap-4 pb-20">
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`bg-[#e7f9ff] py-2 px-4 rounded-lg grid gap-2 w-2/3 ${
-              username === msg.username && "justify-self-end"
-            }`}
-          >
-            <p className="text-sm text-gray-400">{msg.username}</p>
-            <p className="pl-1">{msg.message}</p>
-          </div>
-        ))}
-      </div>
+    <div className="relative p-4 w-full grid h-screen">
+      {isLoading ? (
+        <div className="grid justify-center content-center">
+          <div className="border-4 border-[#0000001a] border-l-transparent rounded-[50%] h-10 w-10 animate-spin"></div>
+        </div>
+      ) : (
+        <div className="w-[90%] md:w-1/2 justify-self-center flex flex-col gap-4 pb-20">
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`bg-[#e7f9ff] py-2 px-4 rounded-lg grid gap-2 w-2/3 ${
+                username === msg.username && "self-end"
+              }`}
+            >
+              <p className="text-sm text-gray-400">{msg.username}</p>
+              <p className="pl-1">{msg.message}</p>
+            </div>
+          ))}
+        </div>
+      )}
       <form
         className="fixed bottom-[2rem] w-[90%] md:w-1/2 left-1/2 -translate-x-1/2 grid grid-cols-[8fr_1fr] shadow-md"
         onSubmit={sendMessage}
