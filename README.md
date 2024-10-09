@@ -82,4 +82,4 @@ Demo Credentials - username: demo | password: password
 For questions or feedbacks feel free to contact me:
 
 - **Email:** achaldev3@gmail.com
-- **LinkedIn:** [Achal](https://www.linkedin.com/in/achal-ab39652b4/)
+- **LinkedIn:** [Achal](https://www.linkedin.com/in/-achal/)
