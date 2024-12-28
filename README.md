@@ -31,7 +31,7 @@ Demo Credentials - username: demo | password: password
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Achal-00/chat-app.git
+   git clone https://github.com/spudoodle/chat-app.git
 
 2. Navigate to the project directory:
    ```bash
