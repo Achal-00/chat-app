@@ -76,10 +76,3 @@ Demo Credentials - username: demo | password: password
 5. Start the development server:
    ```bash
    node server.js
-
-## Contact Information
-
-For questions or feedbacks feel free to contact me:
-
-- **Email:** achaldev3@gmail.com
-- **LinkedIn:** [Achal](https://www.linkedin.com/in/-achal/)
